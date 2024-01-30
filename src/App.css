@@ -1,0 +1,197 @@
+*{
+    padding: 0%;
+    
+}
+.logo_mi{
+    width: 5rem;
+}
+/* header del portafolio */
+.header_porta{
+display: flex;
+flex-wrap: nowrap;
+align-items: center;
+justify-content: space-between;
+background: rgb(93,224,230);
+background: linear-gradient(90deg, rgba(93,224,230,1) 0%, rgba(0,74,173,1) 100%);
+}
+.directori{
+    display: flex;
+    flex-wrap: nowrap;
+    list-style: none;
+    
+}
+.list_porta{
+    padding: 0.2rem;
+    display: flex;
+    margin-right:3rem ;
+    list-style: none;
+    color: white;
+}
+.modo_dark{
+    width: 2rem;
+    padding-right: 1rem;
+}
+/* pagina de inicio */
+.info_mi{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content:baseline;
+    flex-direction: column;
+}
+/* saludo */
+.title{
+    border-radius:10px ;
+    background-color:rgb(93,224,230);
+    background: linear-gradient(90deg, rgba(93,224,230,1) 0%, rgba(0,74,173,1) 100%);
+    width: 5.5rem;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+/* imagen de inicio */
+.img_mia{
+    width: 250px;
+    height: 250px;
+    border-radius: 100px;
+    position: relative;
+    bottom: 15px;
+    margin: 0%;
+
+}
+/* nombre  */
+.title_n{
+    font-size: xx-large;
+    font-weight: bolder;
+    color:white;
+    position: relative;
+    background-color:rgb(93,224,230);
+    background: linear-gradient(90deg, rgba(93,224,230,1) 0%, rgba(0,74,173,1) 100%);
+    border-radius: 37px;
+    width: 26rem;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    gap: 2px;
+    animation-name: nombre;
+    animation-duration: 8s;
+    animation-delay: 2s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    bottom: 20px;
+   
+}
+.title_profetion{
+    bottom: 20px;
+    display: flex;
+}
+/* lista de redes de info */
+.lista{
+    display: flex;
+    list-style: none;
+    gap: 3rem;
+    justify-content: center;
+    align-items: center;
+}
+a:link{text-decoration: none;} a:visited{text-decoration: none;}
+/* redes */
+.list_init{
+    border: 0,5px solid ;background-color:rgb(93,224,230);
+    background: linear-gradient(90deg, rgba(93,224,230,1) 0%, rgba(0,74,173,1) 100%); 
+    height: 2rem;
+    border-radius: 12px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    width: 7rem;
+    list-style: none;
+    opacity: 0.9;
+    cursor: pointer;
+    color: black;
+    transition: opacity 200ms ease,
+                transform 200ms ease;
+                box-shadow: 200ms ease;
+}
+.list_init:hover{
+    opacity: 1;
+    transform: scale(1.3);
+    box-shadow:0 0 10px black,0 0 40px black, 0 0 80px black ;
+    transition-delay:200ms ;
+}
+/* animacion de el saludo de la pagina */
+
+
+/* animacion a mi nombre */
+@keyframes nombre {
+ 0%{color:white;}
+ 25%{color:black ;}
+ 50%{color:white ;}
+ 75%{color:black ;}
+ 100%{color:white ;}
+    
+}
+/* pagina de los proyectos*/
+.pag_proyect{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    
+}
+
+
+/* carrusel completo  */
+.carrusel{
+    width: 50%;
+    max-width:100em ;
+    background: rgb(93,224,230);
+background: linear-gradient(90deg, rgba(93,224,230,1) 0%, rgba(0,74,173,1) 100%);
+    padding: 2em;
+    overflow-x:hidden ;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    
+}
+/* parte interna del carrusel  */
+.carrusel_grande{
+    width: 200%;
+    background-color:whitesmoke;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2em;
+
+    transition: all .5s ease;
+    transform: translateX(0%) ;
+}
+/* imagenes de el carrusel */
+.carrusel_img{
+    width: calc(100% / 3);
+    background-color: gainsboro;
+    min-height:10vh ;
+    display: flex;
+    flex-direction: column;
+}
+
+.carrusel_puntos{
+    width: 100%;
+    background: rgb(93,224,230);
+    background: linear-gradient(90deg, rgba(93,224,230,1) 0%, rgba(0,74,173,1) 100%);
+    padding: .4em;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    margin: 1em 0 0;
+    list-style: none;
+}
+/* puntos para moverce entre imagenes */
+.carrusel_punto{
+    width: 2em;
+    height: 2em;
+    background: rgb(93,224,230);
+background: linear-gradient(90deg, rgba(93,224,230,1) 0%, rgba(250,250,250,1) 100%);
+    margin: 1em 1em 0;
+    border-radius: 1em;
+}
