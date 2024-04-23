@@ -41,13 +41,17 @@ position: relative;
     position: absolute;
     height: 210px;
     width: 150px;
-    right: 0px;
+    right: -150px;
     z-index: 2;
     top: 62px;
     background: rgba(93, 223, 230, 0.667);
     background: linear-gradient(90deg, rgba(93, 223, 230, 0.669) 0%, rgba(0,74,173,1) 100%);
     align-items: center;
     justify-content: center;
+}
+.directori_active{
+ right: 0;
+
 }
 .dark_directori{
     display: flex;
@@ -56,7 +60,7 @@ position: relative;
     position: absolute;
     height: 210px;
     width: 150px;
-    right: 0px;
+    right: -150px;
     z-index: 2;
     top: 62px;
     background: rgba(247, 2, 2, 0.56);
@@ -64,6 +68,7 @@ background: linear-gradient(90deg, rgba(247, 2, 2, 0.463) 0%, rgba(114, 2, 2, 0.
 align-items: center;
 justify-content: center;
 }
+
 
 /* lista de el header */
 .list_porta{
@@ -81,13 +86,61 @@ justify-content: center;
     color: white;
     text-decoration: none;
 }
-.menu{
+
+.menu_open{
     position: absolute;
     color: white;
     font-size: xx-large;
-    right: 50px;
+    right: 10px;
     top: 20px;
 }
+.dark_menu_open{
+    position: absolute;
+    color: yellow;
+    font-size: xx-large;
+    right: 10px;
+    top: 20px;
+}
+
+
+.dark_name{
+    color: white;
+}
+.light_name{
+    color: black;
+}
+/* stilos de switch */
+.modo_oscuro{
+    list-style: none;
+    position:absolute;
+    right: 40px;
+    top: 8px;
+}
+.sol_luna{
+ 
+    height: 30px;
+    width: 30px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 15px;
+}
+.dark{
+    color:yellow;
+}
+.light{
+    color: white;
+}
+.dark_body {
+    background-color: black;
+    color: white;
+}
+.light_body{
+    background-color: rgb(202, 226, 245);
+    color: black;
+}
+
 @media  (min-width: 570px){
     .header_porta{
         display: flex;
@@ -98,7 +151,7 @@ justify-content: center;
         background: linear-gradient(90deg, rgba(93,224,230,1) 0%, rgba(0,74,173,1) 100%);
         position: relative;
         }
-   .menu{
+   .menu_open{
     display: none;
    }
     .directori{
@@ -151,46 +204,6 @@ justify-content: center;
        
     }
 }
-
-.dark_name{
-    color: white;
-}
-.light_name{
-    color: black;
-}
-/* stilos de switch */
-.modo_oscuro{
-    list-style: none;
-    position:absolute;
-    right: 0;
-    top: 8px;
-}
-.sol_luna{
- 
-    height: 30px;
-    width: 30px;
-    border-radius: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-right: 15px;
-}
-.dark{
-    color:yellow;
-}
-.light{
-    color: white;
-}
-.dark_body {
-    background-color: black;
-    color: white;
-}
-.light_body{
-    background-color: rgb(202, 226, 245);
-    color: black;
-}
-
-
 
 
 
