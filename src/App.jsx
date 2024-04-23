@@ -1,47 +1,66 @@
 import './App.css'
 // IMPORTACION INICIO
 import Inicio from './pages/Inicio'
-import { Link, Route,Router,Routes } from 'react-router-dom'
+import { Link, Route,Routes, } from 'react-router-dom'
 // IMPORTAR SOBRE MI
 import SobreMi from './pages/SobreMi'
 import Proyecto from './pages/Proyecto'
 import Contactame from './pages/Contactame'
+import {FaSun, FaMoon} from 'react-icons/fa'
+import { useState } from 'react'
+import { GiHamburgerMenu } from "react-icons/gi";
 
 function App() {
 // modo oscuro 
 
-  
+const [dark, setDark] = useState(false)
+
+const darkMode=()=>{
+  if(dark === false){
+    setDark(true)
+  }else{
+    setDark(false)
+  }
+  return darkMode
+}
+ 
   return (
-    <div>
-      <header className='header_porta'>
-        <img className='logo_mi' src="mi logo.png" alt="" />
+ 
+       <div>
+        <body  className={dark ? "dark_body":"light_body"} >
+      <header className={dark? "dark_header" : 'header_porta'}>
+        <img className={dark ? "dark_logo":"mi_logo"} src={dark ? "dark_logo.png":"mi_logo.png"} alt="" />
         <nav>
           <ul className='directori'>
-            <li className='list_porta'> <Link to='/'>inicio</Link></li>
-            <li className='list_porta'> <Link to='/SobreMi' >sobre mi</Link></li>
-            <li className='list_porta'><Link to='/proyectos'>proyectos</Link></li>
-            <li className='list_porta'><Link to='/contactame'>contactame</Link></li>
+            <li className={dark ? 'dark_list_header':'list_porta'}> <Link  to='/'><div className={dark ? 'dark_name':'light_name'}> inicio</div></Link></li>
+            <li className={dark ? 'dark_list_header':'list_porta'}> <Link to='/SobreMi' > <div className={dark ? 'dark_name':"light_name"}>sobre mi</div></Link></li>
+            <li className={dark ? 'dark_list_header':'list_porta'}><Link to='/proyectos'><div className={dark ? 'dark_name':"light_name"}> proyectos</div></Link></li>
+            <li className={dark ? 'dark_list_header':'list_porta'}><Link to='/contactame'><div className={dark ? 'dark_name':"light_name"}>contactame</div></Link></li>
+          </ul>
+          <div className='menu'><GiHamburgerMenu/></div>
+          <ul className='modo_oscuro'>
+          <li className='switch'>
+            <div className='sol_luna'>
+            <i className={dark ? 'dark':"light"} onClick={darkMode} >{ dark==false ? <FaMoon/>: < FaSun/>} </i>
+            </div>
+            </li>
           </ul>
         </nav>
-        <img className='modo_dark' src="night.png" alt="" />
+        
       </header>
       <Routes>
-        <Route path='/' element={<Inicio />} />
-        <Route path='/SobreMi' element={<SobreMi/>}/>
-        <Route path='/proyectos' element={<Proyecto/>} />
-        <Route path='/Contactame' element={<Contactame/>} />
+        <Route path='/' element={<Inicio dark={dark}/>}/>
+        <Route path='/SobreMi' element={<SobreMi dark={dark}/>}/>
+        <Route path='/proyectos' element={<Proyecto  dark={dark}/>}/>
+        <Route path='/Contactame' element={<Contactame dark={dark}/>} />
       </Routes>
+       </body>
+        </div>
+  
    
-    </div>
  
   )
 
-
-
-
-
-
-
 }
 
-export default App
+export default App 

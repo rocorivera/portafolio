@@ -1,49 +1,38 @@
-import React, { useState } from 'react'
+
+import {FaGithub} from 'react-icons/fa'
+
+const Proyecto = ({dark}) => {
 
 
-const Proyecto = () => {
-// indice de la imagen
-const imagenes=[
-  ('../src/img/pokedex.png'),
-  ('../src/img/rick_and_morty.png'),
-  ('../src/img/e-commerse.png')
-  ]
-const [imagenesActual, setImagenesActual] = useState(0)
 
-const cantidad= imagenes?.length;
-
-const handleNext = ()=>{
-  setImagenesActual(imagenesActual === cantidad -1 ? 0 : imagenesActual+ 1)
-}
-
-const handleBack=()=>{
-  setImagenesActual(imagenesActual===0 ? cantidad -1 : imagenesActual -1)
-}
 
   return (
-    <div className='pag_proyect'>
-        <h2>PROYECTOS</h2>
-        <div className='carrusel'>
-         
-        <div className='carrusel_grande'>
-            
-        {imagenes.map((imagen, index)=>{
-          return (
-            <div> 
-              {imagenesActual === index && (
-                <img className='carrusel_img' key={index} src={imagen} alt='imagen'/>
-              )}
-            </div>
-          )
-        })}
-         </div>
-       
-        <ul className='carrusel_puntos' > 
-            <li className='carrusel_punto' onClick={handleBack}></li>
-         
-            <li className='carrusel_punto' onClick={handleNext}></li>
-        </ul>
-    </div>
+    <div className={dark?"dark_pag_proyect": 'pag_proyect'}>
+      <h2 className={dark?"dark_proyect": 'proyect'}>PROYECTOS</h2>
+        <div className={dark?"dark_mi_proyects": 'mi_proyects'}>
+          <div className={dark?"dark_proyects": 'proyects'}>
+            <h2 className={dark?"dark_proy_title": 'proy_title'}>POKEDEX</h2>
+            <img className={dark?"dark_img_proyect": 'img_proyect'} src="pokedex.png" alt="pokedek.png" />
+            <p className={dark?"dark_text_proyect": 'text_proyect'}>En este proyecto realize el consumo de una api utilizando react, html, css y  librerias como router-dom, redux, axios. fue un muy buen reto y me gusto enfrentarme a ello.</p>
+          </div>
+          <button className={dark?"dark_button_proyect": 'button_proyect'}><a href="https://github.com/rocorivera/pokedex" target='_blank'  >ver codigo</a></button>
+            <button className={dark?"dark_button_proyect": 'button_proyect'}><a href="http://pokedex2019.netlify.app" target="_blank" rel="noopener    noreferrer">Ver App</a></button>
+          <div className={dark?"dark_proyects": 'proyects'}>
+            <h2 className={dark?"dark_proy_title": 'proy_title'}>Rick And Morty</h2>
+            <img className={dark?"dark_img_proyect": 'img_proyect'}  src="rick_and_morty.png"alt="rick_and_morty.png" />
+            <p className={dark?"dark_text_proyect": 'text_proyect'}> Consumo de api, para este proyecto utilize algunas librerias como react dom, axios este proyecto desarrollado con react, javascripts, css y el mayor reto fue la toma de color para la aplicacion. </p>
+          </div>
+          <button className={dark?"dark_button_proyect": 'button_proyect'}><a href="https://github.com/rocorivera/rickandmorty"target='_blank'>Ver Código</a></button>
+            <button className={dark?"dark_button_proyect": 'button_proyect'}><a href="https://my-rick-and-morty12.netlify.app/"target='_blank'>Ver App</a></button>
+          <div className={dark?"dark_proyects": 'proyects'}>
+            <h2 className={dark?"dark_proy_title": 'proy_title'}>E-commerse</h2>
+            <img className={dark?"dark_img_proyect": 'img_proyect'} src="e-commerse.png" alt="e-commerse.png" />
+            <p className={dark?"dark_text_proyect": 'text_proyect'}>Este fue mi primer proyecto es un e-commerse utilizando solamente html,javascripts y css uno de los proyectos que fue bastante largo y dificil pero quede conforme con los resultados </p>
+          </div>
+          <button className={dark?"dark_button_proyect": 'button_proyect'}><a href="https://github.com/Danieljsh094/Tienda-Academlo.git" target="_blank" >Ver Código</a></button>
+            <button className={dark?"dark_button_proyect": 'button_proyect'}><a href="https://tiendaacademlo-1.netlify.app/" target="_blank">Ver App</a></button>
+          <button className={dark?"dark_button_proyect": 'button_proyect'}><a href="https://github.com/rocorivera?tab=repositories" target="_blank"><FaGithub/></a></button>
+        </div>
     </div>
   )
 }
