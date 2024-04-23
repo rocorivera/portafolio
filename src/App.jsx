@@ -31,7 +31,7 @@ const darkMode=()=>{
       <header className={dark? "dark_header" : 'header_porta'}>
         <img className={dark ? "dark_logo":"mi_logo"} src={dark ? "dark_logo.png":"mi_logo.png"} alt="" />
         <nav>
-          <ul className='directori'>
+          <ul className={dark?"dark_directori": 'directori'}>
             <li className={dark ? 'dark_list_header':'list_porta'}> <Link  to='/'><div className={dark ? 'dark_name':'light_name'}> inicio</div></Link></li>
             <li className={dark ? 'dark_list_header':'list_porta'}> <Link to='/SobreMi' > <div className={dark ? 'dark_name':"light_name"}>sobre mi</div></Link></li>
             <li className={dark ? 'dark_list_header':'list_porta'}><Link to='/proyectos'><div className={dark ? 'dark_name':"light_name"}> proyectos</div></Link></li>
