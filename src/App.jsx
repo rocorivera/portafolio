@@ -28,7 +28,7 @@ const [open, setOpen] = useState(false)
  
 const handleMenu=()=>{
   const menu = document.getElementById("directori");
-  menu.classList.toggle('directori_active');
+  menu.classList.toggle('dark_directori_active');
   if(open===false){
     setOpen(true)
   }else{

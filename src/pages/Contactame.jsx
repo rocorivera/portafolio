@@ -24,7 +24,7 @@ const Contactame = ({dark}) => {
       })
       .then(
         () => {
-          console.log('SUCCESS!');
+          console.log('enviado correctamente');
         },
         (error) => {
           console.log('FAILED...', error.text);
